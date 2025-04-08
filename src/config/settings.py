@@ -46,4 +46,4 @@ COLOR_THEMES = {
         "background": (255, 255, 255),
         "text": (0, 0, 0),
     },
-} 
+}
