@@ -48,6 +48,8 @@ jobs:
         mypy src
         
     - name: Run tests with pytest
+      env:
+        PYTHONPATH: ./src
       run: |
         pytest --cov=src --cov-report=xml
         
