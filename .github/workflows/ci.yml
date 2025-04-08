@@ -15,6 +15,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.CI_PAT }}
     
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v4
@@ -38,6 +40,8 @@ jobs:
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add .
         git diff --quiet && git diff --staged --quiet || (git commit -m "style: format code with black" && git push)
+      env:
+        GITHUB_TOKEN: ${{ secrets.CI_PAT }}
         
     - name: Run type checking with mypy
       run: |
