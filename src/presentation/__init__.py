@@ -1,8 +1,7 @@
-from typing import List, Optional, Union
+from typing import List, Optional
 from pptx import Presentation
-from pptx.util import Inches, Pt
+from pptx.util import Inches
 from pptx.enum.text import PP_ALIGN
-from pptx.dml.color import RGBColor
 
 
 class PresentationBuilder:

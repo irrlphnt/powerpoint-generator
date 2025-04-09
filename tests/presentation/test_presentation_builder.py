@@ -1,5 +1,4 @@
 import pytest
-from pathlib import Path
 from pptx import Presentation
 from src.presentation import PresentationBuilder
 
